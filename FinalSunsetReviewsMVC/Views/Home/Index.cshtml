@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Sunset Central - Home Page";
 }
 
 <div class="row container-fluid">
@@ -9,17 +9,19 @@
     </div>
 </div>
 
+@*BODY*@
     <div class="row">
         <div class="findReviews col-md-6">
             <h2 class="subtitle">Find Reviews</h2>
             <p>
-                Talk about the kinds and ways people have reviewed stuff.
+                Review all your sunsets here. Help your fellow sunset-philes out!
             </p>
             <p> <button class="btn-primary">@Html.ActionLink("Let's Go!", "Index", "Reviews")</button></p>
         </div>
+
         <div class="findReviews col-md-6">
             <h2 class="subtitle">Categories</h2>
-            <p class="btn-link">Find reviews within specific categories.</p>
+            <p class="btn-link">Find reviews within specific areas of the world.</p>
             <p><button class="btn-primary">@Html.ActionLink("See Categories", "Index", "Categories")</button></p>
         </div>
 

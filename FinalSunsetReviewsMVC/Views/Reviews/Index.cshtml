@@ -28,14 +28,14 @@
 
         //if ((cellNum) % 2 == 0)
         //{
+
+        //I WANTED THESE TO DISPLAY WITHOUT ALL THE INFO, AND IN LITTLE BOXES ACROSS THE SCREEN
         <div class="row container-fluid col-md-4">           
-            
                 <div class="caption">
                     <h3 class=blurbTitle>@Html.DisplayFor(modelItem => item.Category.Location)</h3>
                     <p class="review">Reviewer: @Html.DisplayFor(modelItem => item.ReviewerName)</p>
                     <p class="review">@Html.DisplayNameFor(model => model.ReviewDate): @Html.DisplayFor(modelItem => item.ReviewDate)</p>
                     <p class="review col-md-12">@Html.ActionLink("Details", "Details", new { id = item.ReviewID }, new { @class = "btn btn-primary", role = "button" }) </p>
-
                 </div>
         </div>
         @*}
@@ -44,7 +44,8 @@
         }*@
     }
 </div>
-@*<table class="table">
+@*I WANTED TO USE NO TABLES, BUT PRESERVE ALL THE INFO IN CASE I NEEDED IT LATER. if you didn't want to see process I would delete them at the end. 
+    <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Category.Location)
@@ -88,6 +89,8 @@
             @Html.DisplayFor(modelItem => item.IsRecommended)
         </td>
         <td>
+
+    DIDN'T WANT THIS DISPLAYED ON THE INDEX EITHER
             @Html.ActionLink("Edit", "Edit", new { id=item.ReviewID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ReviewID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ReviewID })

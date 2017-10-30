@@ -18,6 +18,7 @@
     
     <div class="form-horizontal">
         
+@*MODIFIED THE CREATE TO LOOK BETTER, ADDED PLACEHOLDER WHERE i THOUGHT NECESSARY*@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group revName">
@@ -45,6 +46,7 @@
             </div>
         </div>
 
+        @*THOUGHT THE LABEL LOOKED BAD*@
         <div class="form-group revContent">
             <label class="control-label col-md-2">Tell us about your sunset!</label>
             @*@Html.LabelFor(model => model.ReviewContent, htmlAttributes: new { @class = "control-label col-md-2" })*@
