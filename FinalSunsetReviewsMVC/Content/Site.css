@@ -22,28 +22,34 @@
 
 /* Set width on the form input elements since they're 100% wide by default */
 /*input*/
-select,
+/*select,
 textarea {
     max-width: 280px;
-}
+}*/
 
+/*BUTTONS for HOMEPAGE*/
 .btn-primary {
     display: block;
-    object-position: center;
-   margin: 20px 60px 20px 60px;
+    /*object-position: center;*/
+   margin: 20px 0px 20px 120px;
     background: none;
     color:#DC5A4A;
     border: #DC5A4A inset;
     font-family: 'Times New Roman';
     font-size: 20px;
     
-    
 }
-    .btn-primary:hover {
+
+.btn-link {
+    color: white;
+}
+
+.btn-primary:hover {
         background: #DC5A4A;
         color:darkblue;
     }
 
+    /*BUTTONS form EVERYWHERE ELSE*/
     .btn-primary-detail{    
         display: block;
     /*object-position: center;*/
@@ -66,6 +72,7 @@ textarea {
     background-image: url('sunsetphoto.jpeg');
     color: white;
     font-family: 'Dancing Script', cursive;
+    width: 100%;
 }
 
 .findReviews {
@@ -93,10 +100,7 @@ textarea {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.reviewItTitle {
-}
-
-/*REVIEW INDEX*/
+/*ALL LABELS FOR EVERYTHING*/
 .blurbTitle,
 .review,
 .content,
@@ -127,12 +131,22 @@ textarea {
 
 /*NAVBAR*/
 .navbar,
-.navbar-inverse,
 .navbar-fixed-top,
 .navbar-header,
 .nav,
-.navbar-nav li{
+.navbar-nav {
     text-decoration: none;
     color: white;
-    background-color: none;
+    background-color: #5A3D47;
+}
+
+    .navbar-nav li {
+        color: white;
+    }
+.btn-primary:hover
+
+/*ABOUT*/ 
+.aboutTitle {
+    font-family: 'Dancing Script', cursive;
+    color: white;
 }
