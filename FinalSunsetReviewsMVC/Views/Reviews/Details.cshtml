@@ -1,0 +1,44 @@
+﻿@model FinalSunsetReviewsMVC.Models.Review
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container-fluid">
+    <div class="jumbotron col-md-12 col-lg-12">
+
+        <h2>Detailed Reviews</h2>
+        <h3 class="subtitle">From fellow sunset aficianados</h3>
+    </div>
+</div>
+      
+
+            <div class="row container-fluid">
+                @*<div class="rowGreen">*@
+                <div class="row container-fluid">
+                    <div class="col-md-4"></div>
+                    <h2 class="blurbTitle col-md-6">Sunset Viewed in: @Html.DisplayFor(model => model.ReviewTitle)</h2> <p class="edit col-md-2">@Html.ActionLink("Edit your Review", "Edit", new { id = Model.ReviewID })</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <p class="review">Area of the world: @Html.DisplayFor(model => model.Category.Location)</p>
+                    <p class="review">@Html.DisplayNameFor(model => model.ReviewDate): @Html.DisplayFor(model => model.ReviewDate)</p>
+                    <p class="review"> @Html.DisplayNameFor(model => model.ReviewerName): @Html.DisplayFor(model => model.ReviewerName)</p>
+                    <h3 class="review">@Html.DisplayNameFor(model => model.IsRecommended): @Html.DisplayFor(model => model.IsRecommended)</h3>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <p class="content">@Html.DisplayFor(model => model.ReviewContent)</p>
+                   
+                     <div class="row container-fluid">
+                         <button class="btn-primary-detail col-md-4">@Html.ActionLink("Back to All Reviews", "Index")</button>
+                    </div>
+                   
+
+                    @*</div>*@
+                </div>
+                @*</div>*@
+            </div>
+
+            
+
+ 
+

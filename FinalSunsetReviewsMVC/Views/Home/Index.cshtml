@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row container-fluid">
+    <div class="jumbotron">
+        <h1>Sunset Central</h1>
+        <h3 class="subtitle">Letting you share your sunset experiences.</h3>
+    </div>
+</div>
+
+    <div class="row">
+        <div class="findReviews col-md-6">
+            <h2 class="subtitle">Find Reviews</h2>
+            <p>
+                Talk about the kinds and ways people have reviewed stuff.
+            </p>
+            <p> <button class="btn-primary">@Html.ActionLink("Let's Go!", "Index", "Reviews")</button></p>
+        </div>
+        <div class="findReviews col-md-6">
+            <h2 class="subtitle">Categories</h2>
+            <p>Find reviews within specific categories.</p>
+            <p><button class="btn-primary">@Html.ActionLink("See Categories", "Index", "Categories")</button></p>
+        </div>
+
+    </div>

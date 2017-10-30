@@ -1,0 +1,91 @@
+﻿@model FinalSunsetReviewsMVC.Models.Review
+
+@{
+    ViewBag.Title = "Write your Review";
+}
+
+<div class="row container-fluid">
+    <div class="jumbotron">
+        <h2>Write your Review</h2>
+        <h3 class="subtitle">Let others know about your amazing sunset experience</h3>
+    </div>
+</div>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group revName">
+            @Html.LabelFor(model => model.ReviewerName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.ReviewerName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ReviewerName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group revTitle">
+            <label class="control-label col-md-2">Where was your sunset?</label>
+            @*@Html.LabelFor(model => model.ReviewTitle, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.ReviewTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ReviewTitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group revDate">
+            @Html.LabelFor(model => model.ReviewDate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.ReviewDate, new { htmlAttributes = new { @class = "form-control", rows = "5" } })
+                @Html.ValidationMessageFor(model => model.ReviewDate, "", new { @class = "textarea" })
+            </div>
+        </div>
+
+        <div class="form-group revContent">
+            <label class="control-label col-md-2">Tell us about your sunset!</label>
+            @*@Html.LabelFor(model => model.ReviewContent, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ReviewContent, new { htmlAttributes = new { @class = "form-control",  @placeholder = "How did you feel about this sunset?", @rows = "10" } })
+                
+                @Html.ValidationMessageFor(model => model.ReviewContent, "", new { @class = "textarea" })
+            </div>
+        </div>
+
+        <div class="form-group revReco">
+            @Html.LabelFor(model => model.IsRecommended, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.IsRecommended)
+                    @Html.ValidationMessageFor(model => model.IsRecommended, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group revCategory">
+            <label class="control-label col-md-2">Country or state where you saw your sunset</label>
+            @*@Html.LabelFor(model => model.CategoryID, "CategoryID", htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.DropDownList("CategoryID", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

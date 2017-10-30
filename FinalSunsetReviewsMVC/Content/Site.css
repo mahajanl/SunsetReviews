@@ -1,0 +1,138 @@
+﻿body {
+    background-color:#5A3D47;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input*/
+select,
+textarea {
+    max-width: 280px;
+}
+
+.btn-primary {
+    display: block;
+    object-position: center;
+   margin: 20px 60px 20px 60px;
+    background: none;
+    color:#DC5A4A;
+    border: #DC5A4A inset;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    
+    
+}
+    .btn-primary:hover {
+        background: #DC5A4A;
+        color:darkblue;
+    }
+
+    .btn-primary-detail{    
+        display: block;
+    /*object-position: center;*/
+   margin: 20px 0px 20px 10px;
+    background: none;
+    color:white;
+    border: #DC5A4A inset;
+    font-family: 'Times New Roman';
+    font-size: 16px;
+    
+}
+    .btn-primary-detail:hover {
+        background: #DC5A4A;
+        color:darkblue;
+    }
+
+
+.jumbotron {
+    /*I PURPOSELY ONLY WANT A PORTION OF THIS IMAGE SHOWING it's the only part that's both light and dark enough*/
+    background-image: url('sunsetphoto.jpeg');
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+
+.findReviews {
+    color: white;
+}
+
+.backToIndex {
+    color:darkblue;
+    font-family: 'Dancing Script', cursive;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px 20px 20px 80px;
+}
+
+/*dark purple color: #5A3D47*/
+/*pink: #DC5A4A */
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    margin: 20px 20px 20px 80px;
+    color: white;
+}
+
+.content {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.reviewItTitle {
+}
+
+/*REVIEW INDEX*/
+.blurbTitle,
+.review,
+.content,
+.revName,
+.revContent,
+.revTitle,
+.revDate,
+.revReco,
+.revCategory {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.edit {
+    padding: 20px 0px 0px 0px
+}
+
+/*DETAILS*/
+.locTitle {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.caption {
+    color: white;
+}
+
+/*NAVBAR*/
+.navbar,
+.navbar-inverse,
+.navbar-fixed-top,
+.navbar-header,
+.nav,
+.navbar-nav li{
+    text-decoration: none;
+    color: white;
+    background-color: none;
+}
